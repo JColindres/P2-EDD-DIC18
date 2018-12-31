@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for hello complex type.
+ * <p>Java class for Suma complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="hello">
+ * &lt;complexType name="Suma">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,11 +27,11 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "hello", propOrder = {
+@XmlType(name = "Suma", propOrder = {
     "a",
     "b"
 })
-public class Hello {
+public class Suma {
 
     protected int a;
     protected int b;

@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for helloResponse complex type.
+ * <p>Java class for SumaResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="helloResponse">
+ * &lt;complexType name="SumaResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "helloResponse", propOrder = {
+@XmlType(name = "SumaResponse", propOrder = {
     "_return"
 })
-public class HelloResponse {
+public class SumaResponse {
 
     @XmlElement(name = "return")
     protected int _return;

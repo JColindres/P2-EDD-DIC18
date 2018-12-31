@@ -31,12 +31,12 @@ public interface ServiciosWeb1 {
      * @return
      *     returns int
      */
-    @WebMethod
+    @WebMethod(operationName = "Suma")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "hello", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.Hello")
-    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.HelloResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/helloRequest", output = "http://ServiciosWeb/ServiciosWeb1/helloResponse")
-    public int hello(
+    @RequestWrapper(localName = "Suma", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.Suma")
+    @ResponseWrapper(localName = "SumaResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.SumaResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/SumaRequest", output = "http://ServiciosWeb/ServiciosWeb1/SumaResponse")
+    public int suma(
         @WebParam(name = "a", targetNamespace = "")
         int a,
         @WebParam(name = "b", targetNamespace = "")

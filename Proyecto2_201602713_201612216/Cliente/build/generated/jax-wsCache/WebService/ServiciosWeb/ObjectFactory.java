@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Hello_QNAME = new QName("http://ServiciosWeb/", "hello");
-    private final static QName _HelloResponse_QNAME = new QName("http://ServiciosWeb/", "helloResponse");
+    private final static QName _SumaResponse_QNAME = new QName("http://ServiciosWeb/", "SumaResponse");
+    private final static QName _Suma_QNAME = new QName("http://ServiciosWeb/", "Suma");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: ServiciosWeb
@@ -35,37 +35,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HelloResponse }
+     * Create an instance of {@link Suma }
      * 
      */
-    public HelloResponse createHelloResponse() {
-        return new HelloResponse();
+    public Suma createSuma() {
+        return new Suma();
     }
 
     /**
-     * Create an instance of {@link Hello }
+     * Create an instance of {@link SumaResponse }
      * 
      */
-    public Hello createHello() {
-        return new Hello();
+    public SumaResponse createSumaResponse() {
+        return new SumaResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Hello }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SumaResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "hello")
-    public JAXBElement<Hello> createHello(Hello value) {
-        return new JAXBElement<Hello>(_Hello_QNAME, Hello.class, null, value);
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "SumaResponse")
+    public JAXBElement<SumaResponse> createSumaResponse(SumaResponse value) {
+        return new JAXBElement<SumaResponse>(_SumaResponse_QNAME, SumaResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HelloResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Suma }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "helloResponse")
-    public JAXBElement<HelloResponse> createHelloResponse(HelloResponse value) {
-        return new JAXBElement<HelloResponse>(_HelloResponse_QNAME, HelloResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Suma")
+    public JAXBElement<Suma> createSuma(Suma value) {
+        return new JAXBElement<Suma>(_Suma_QNAME, Suma.class, null, value);
     }
 
 }

@@ -122,7 +122,7 @@ public class Cliente extends javax.swing.JFrame {
         // TODO add your handling code here:
         int num1 = Integer.parseInt(jTextField1.getText());
         int num2 = Integer.parseInt(jPasswordField1.getText());
-        int res = ws.hello(num1, num2);
+        int res = ws.suma(num1, num2);
         
         jLabel4.setText("" + res);
         Menu m = new Menu();
