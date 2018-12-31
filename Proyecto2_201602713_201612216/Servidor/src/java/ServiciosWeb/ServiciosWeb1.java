@@ -19,7 +19,7 @@ public class ServiciosWeb1 {
     /**
      * This is a sample web service operation
      */
-    @WebMethod(operationName = "hello")
+    @WebMethod(operationName = "Suma")
     public int Suma(@WebParam(name = "a") int a, @WebParam(name = "b") int b) {
         return a + b;
     }
