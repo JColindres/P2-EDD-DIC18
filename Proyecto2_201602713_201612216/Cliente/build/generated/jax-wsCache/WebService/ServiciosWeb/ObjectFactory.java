@@ -24,8 +24,10 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _SumaResponse_QNAME = new QName("http://ServiciosWeb/", "SumaResponse");
-    private final static QName _Suma_QNAME = new QName("http://ServiciosWeb/", "Suma");
+    private final static QName _CargarResponse_QNAME = new QName("http://ServiciosWeb/", "CargarResponse");
+    private final static QName _Cargar_QNAME = new QName("http://ServiciosWeb/", "Cargar");
+    private final static QName _InicioSesion_QNAME = new QName("http://ServiciosWeb/", "InicioSesion");
+    private final static QName _InicioSesionResponse_QNAME = new QName("http://ServiciosWeb/", "InicioSesionResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: ServiciosWeb
@@ -35,37 +37,71 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Suma }
+     * Create an instance of {@link InicioSesionResponse }
      * 
      */
-    public Suma createSuma() {
-        return new Suma();
+    public InicioSesionResponse createInicioSesionResponse() {
+        return new InicioSesionResponse();
     }
 
     /**
-     * Create an instance of {@link SumaResponse }
+     * Create an instance of {@link Cargar }
      * 
      */
-    public SumaResponse createSumaResponse() {
-        return new SumaResponse();
+    public Cargar createCargar() {
+        return new Cargar();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SumaResponse }{@code >}}
+     * Create an instance of {@link InicioSesion }
      * 
      */
-    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "SumaResponse")
-    public JAXBElement<SumaResponse> createSumaResponse(SumaResponse value) {
-        return new JAXBElement<SumaResponse>(_SumaResponse_QNAME, SumaResponse.class, null, value);
+    public InicioSesion createInicioSesion() {
+        return new InicioSesion();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Suma }{@code >}}
+     * Create an instance of {@link CargarResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Suma")
-    public JAXBElement<Suma> createSuma(Suma value) {
-        return new JAXBElement<Suma>(_Suma_QNAME, Suma.class, null, value);
+    public CargarResponse createCargarResponse() {
+        return new CargarResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "CargarResponse")
+    public JAXBElement<CargarResponse> createCargarResponse(CargarResponse value) {
+        return new JAXBElement<CargarResponse>(_CargarResponse_QNAME, CargarResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Cargar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar")
+    public JAXBElement<Cargar> createCargar(Cargar value) {
+        return new JAXBElement<Cargar>(_Cargar_QNAME, Cargar.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InicioSesion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "InicioSesion")
+    public JAXBElement<InicioSesion> createInicioSesion(InicioSesion value) {
+        return new JAXBElement<InicioSesion>(_InicioSesion_QNAME, InicioSesion.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InicioSesionResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "InicioSesionResponse")
+    public JAXBElement<InicioSesionResponse> createInicioSesionResponse(InicioSesionResponse value) {
+        return new JAXBElement<InicioSesionResponse>(_InicioSesionResponse_QNAME, InicioSesionResponse.class, null, value);
     }
 
 }

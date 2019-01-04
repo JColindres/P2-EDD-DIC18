@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SumaResponse complex type.
+ * <p>Java class for CargarResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SumaResponse">
+ * &lt;complexType name="CargarResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,19 +27,19 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SumaResponse", propOrder = {
+@XmlType(name = "CargarResponse", propOrder = {
     "_return"
 })
-public class SumaResponse {
+public class CargarResponse {
 
     @XmlElement(name = "return")
-    protected int _return;
+    protected boolean _return;
 
     /**
      * Gets the value of the return property.
      * 
      */
-    public int getReturn() {
+    public boolean isReturn() {
         return _return;
     }
 
@@ -47,7 +47,7 @@ public class SumaResponse {
      * Sets the value of the return property.
      * 
      */
-    public void setReturn(int value) {
+    public void setReturn(boolean value) {
         this._return = value;
     }
 

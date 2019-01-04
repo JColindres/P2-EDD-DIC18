@@ -16,6 +16,7 @@ public class Cliente extends javax.swing.JFrame {
 
     WebService ws_service = new WebService();
     ServiciosWeb1 ws;
+
     /**
      * Creates new form Cliente
      */
@@ -120,13 +121,18 @@ public class Cliente extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        int num1 = Integer.parseInt(jTextField1.getText());
-        int num2 = Integer.parseInt(jPasswordField1.getText());
-        int res = ws.suma(num1, num2);
-        
-        jLabel4.setText("" + res);
-        Menu m = new Menu();
-        m.main(null);
+        boolean res = ws.inicioSesion(jTextField1.getText(), jPasswordField1.getText());
+
+        if (res) {
+            jLabel4.setText("Se inicio sesion");
+            Menu m = new Menu();
+            m.main(null);
+        }
+        else{
+            jLabel4.setText("Datos incorrectos");
+            //jTextField1 = null;
+            //jPasswordField1 = null;
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

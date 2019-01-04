@@ -26,20 +26,32 @@ public interface ServiciosWeb1 {
 
     /**
      * 
-     * @param a
-     * @param b
+     * @param pass
+     * @param user
      * @return
-     *     returns int
+     *     returns boolean
      */
-    @WebMethod(operationName = "Suma")
+    @WebMethod(operationName = "InicioSesion")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Suma", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.Suma")
-    @ResponseWrapper(localName = "SumaResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.SumaResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/SumaRequest", output = "http://ServiciosWeb/ServiciosWeb1/SumaResponse")
-    public int suma(
-        @WebParam(name = "a", targetNamespace = "")
-        int a,
-        @WebParam(name = "b", targetNamespace = "")
-        int b);
+    @RequestWrapper(localName = "InicioSesion", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.InicioSesion")
+    @ResponseWrapper(localName = "InicioSesionResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.InicioSesionResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/InicioSesionRequest", output = "http://ServiciosWeb/ServiciosWeb1/InicioSesionResponse")
+    public boolean inicioSesion(
+        @WebParam(name = "user", targetNamespace = "")
+        String user,
+        @WebParam(name = "pass", targetNamespace = "")
+        String pass);
+
+    /**
+     * 
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "Cargar")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Cargar", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.Cargar")
+    @ResponseWrapper(localName = "CargarResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/CargarRequest", output = "http://ServiciosWeb/ServiciosWeb1/CargarResponse")
+    public boolean cargar();
 
 }

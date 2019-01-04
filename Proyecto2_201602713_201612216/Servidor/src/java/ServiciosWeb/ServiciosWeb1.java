@@ -5,6 +5,10 @@
  */
 package ServiciosWeb;
 
+import avl_arbol.AVLtree;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -16,11 +20,20 @@ import javax.jws.WebParam;
 @WebService(serviceName = "WebService")
 public class ServiciosWeb1 {
 
+    AVLtree avl = new AVLtree();
+
+    @WebMethod(operationName = "Cargar")
+    public boolean Cargar() {
+        avl.cargar_usuarios();
+        return true;
+    }
+
     /**
      * This is a sample web service operation
      */
-    @WebMethod(operationName = "Suma")
-    public int Suma(@WebParam(name = "a") int a, @WebParam(name = "b") int b) {
-        return a + b;
+    @WebMethod(operationName = "InicioSesion")
+    public boolean InicioSesion(@WebParam(name = "user") String user, @WebParam(name = "pass") String pass) {
+        int id = avl.obtener_id(user);
+        return avl.logear_usuario(id, pass);
     }
 }
