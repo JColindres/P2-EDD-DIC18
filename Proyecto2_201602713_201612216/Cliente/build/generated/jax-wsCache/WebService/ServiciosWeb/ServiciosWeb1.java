@@ -26,6 +26,21 @@ public interface ServiciosWeb1 {
 
     /**
      * 
+     * @param url
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "Cargar")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Cargar", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.Cargar")
+    @ResponseWrapper(localName = "CargarResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/CargarRequest", output = "http://ServiciosWeb/ServiciosWeb1/CargarResponse")
+    public boolean cargar(
+        @WebParam(name = "url", targetNamespace = "")
+        String url);
+
+    /**
+     * 
      * @param pass
      * @param user
      * @return
@@ -41,17 +56,5 @@ public interface ServiciosWeb1 {
         String user,
         @WebParam(name = "pass", targetNamespace = "")
         String pass);
-
-    /**
-     * 
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "Cargar")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Cargar", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.Cargar")
-    @ResponseWrapper(localName = "CargarResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/CargarRequest", output = "http://ServiciosWeb/ServiciosWeb1/CargarResponse")
-    public boolean cargar();
 
 }

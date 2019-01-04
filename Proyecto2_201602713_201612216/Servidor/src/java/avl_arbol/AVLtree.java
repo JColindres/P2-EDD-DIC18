@@ -344,13 +344,13 @@ public class AVLtree {
         }
     }
 
-    public void cargar_usuarios() {
+    public void cargar_usuarios(String url) {
         File archivo = null;
         FileReader fr = null;
         BufferedReader br = null;
 
         try {
-            archivo = new File("C:\\Users\\pablo\\Desktop\\P2-EDD-DIC18\\Proyecto2_201602713_201612216\\Servidor\\usuarios1.txt");
+            archivo = new File(url);
             fr = new FileReader(archivo);
             br = new BufferedReader(fr);
 

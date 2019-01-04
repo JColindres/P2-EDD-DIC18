@@ -4,31 +4,31 @@
 <xsd:import namespace="http://ServiciosWeb/" schemaLocation="http://localhost:8080/Servidor/WebService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="InicioSesion">
-<part name="parameters" element="tns:InicioSesion"/>
-</message>
-<message name="InicioSesionResponse">
-<part name="parameters" element="tns:InicioSesionResponse"/>
-</message>
 <message name="Cargar">
 <part name="parameters" element="tns:Cargar"/>
 </message>
 <message name="CargarResponse">
 <part name="parameters" element="tns:CargarResponse"/>
 </message>
+<message name="InicioSesion">
+<part name="parameters" element="tns:InicioSesion"/>
+</message>
+<message name="InicioSesionResponse">
+<part name="parameters" element="tns:InicioSesionResponse"/>
+</message>
 <portType name="ServiciosWeb1">
-<operation name="InicioSesion">
-<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/InicioSesionRequest" message="tns:InicioSesion"/>
-<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/InicioSesionResponse" message="tns:InicioSesionResponse"/>
-</operation>
 <operation name="Cargar">
 <input wsam:Action="http://ServiciosWeb/ServiciosWeb1/CargarRequest" message="tns:Cargar"/>
 <output wsam:Action="http://ServiciosWeb/ServiciosWeb1/CargarResponse" message="tns:CargarResponse"/>
 </operation>
+<operation name="InicioSesion">
+<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/InicioSesionRequest" message="tns:InicioSesion"/>
+<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/InicioSesionResponse" message="tns:InicioSesionResponse"/>
+</operation>
 </portType>
 <binding name="ServiciosWeb1PortBinding" type="tns:ServiciosWeb1">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="InicioSesion">
+<operation name="Cargar">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -37,7 +37,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="Cargar">
+<operation name="InicioSesion">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

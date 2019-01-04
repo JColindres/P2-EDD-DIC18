@@ -9,7 +9,9 @@
 <xs:element name="InicioSesionResponse" type="tns:InicioSesionResponse"/>
 
 <xs:complexType name="Cargar">
-<xs:sequence/>
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="CargarResponse">

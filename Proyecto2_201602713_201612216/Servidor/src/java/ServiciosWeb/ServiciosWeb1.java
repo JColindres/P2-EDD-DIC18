@@ -23,8 +23,8 @@ public class ServiciosWeb1 {
     AVLtree avl = new AVLtree();
 
     @WebMethod(operationName = "Cargar")
-    public boolean Cargar() {
-        avl.cargar_usuarios();
+    public boolean Cargar(@WebParam(name = "url") String url) {
+        avl.cargar_usuarios(url);
         return true;
     }
 
