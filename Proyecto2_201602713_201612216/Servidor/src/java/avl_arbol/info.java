@@ -7,24 +7,20 @@ package avl_arbol;
 
 /**
  *
- * @author Familia Corona
+ * @author pablo
  */
 public class info {
 
-    int id;
-    String titulo;
-    String autor;
-    int pagina;
-    int ejemplar;
-    int prestamo;
+    int numeroF;
+    String fecha;
+    int total;
+    AVLtree usuario;
 
-    public info(int id, String titulo, String autor, int pagina, int ejemplar, int prestamo) {
-        this.id = id;
-        this.titulo = titulo;
-        this.autor = autor;
-        this.pagina = pagina;
-        this.ejemplar = ejemplar;
-        this.prestamo = prestamo;
+    public info(int numeroF, String fecha, int total) {
+        this.numeroF = numeroF;
+        this.fecha = fecha;
+        this.total = total;
+        this.usuario = null;
     }
 
     public info() {
