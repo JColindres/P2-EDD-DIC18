@@ -1,5 +1,95 @@
 digraph G {node[shape=ellipse, style=filled]; edge[color=chartreuse3];rankdir=UD 
 
-1
+Node652[label="652\nmarito\ncontraseña4"];
+Node652 -> Node433
+Node433[label="433\njose\ncontraseña1"];
+Node433 -> Node430
+Node430[label="430\njuan\ncontraseña2"];
+Node430->Node_430_direccion_null 
+ Node_430_direccion_null[shape=box,color=coral,label="NULL"];
+
+Node430->Node_430_compras_0 -> Node_430_compras_1 
+ Node_430_compras_0[shape=box, color=coral, label="Cantidad: 11\naudifonos"];
+ Node_430_compras_1[shape=box, color=coral, label="Cantidad: 1\nCelular"];
+
+Node430->Node_430_carrito_null 
+ Node_430_carrito_null[shape=box,color=coral,label="NULL"];
+
+Node433->Node_433_direccion_null 
+ Node_433_direccion_null[shape=box,color=coral,label="NULL"];
+
+Node433->Node_433_compras_null 
+ Node_433_compras_null[shape=box,color=coral,label="NULL"];
+
+Node433->Node_433_carrito_0 -> Node_433_carrito_1 
+ Node_433_carrito_0[shape=box, color=coral, label="Cantidad: 4\nCelular"];
+Node_433_carrito_1 -> Node_433_carrito_2 
+ Node_433_carrito_1[shape=box, color=coral, label="Cantidad: 21\nreloj"];
+ Node_433_carrito_2[shape=box, color=coral, label="Cantidad: 3\narroz"];
+
+Node433 -> Node538
+Node538[label="538\npedro\ncontraseña3"];
+Node538->Node_538_direccion_null 
+ Node_538_direccion_null[shape=box,color=coral,label="NULL"];
+
+Node538->Node_538_compras_null 
+ Node_538_compras_null[shape=box,color=coral,label="NULL"];
+
+Node538->Node_538_carrito_0 -> Node_538_carrito_1 
+ Node_538_carrito_0[shape=box, color=coral, label="Cantidad: 12\narroz"];
+Node_538_carrito_1 -> Node_538_carrito_2 
+ Node_538_carrito_1[shape=box, color=coral, label="Cantidad: 10\nfrijol"];
+ Node_538_carrito_2[shape=box, color=coral, label="Cantidad: 11\naudifonos"];
+
+Node652->Node_652_direccion_0 -> Node_652_direccion_1 
+ Node_652_direccion_0[shape=box, color=coral, label="calle 15-12\n1\n0"];
+ Node_652_direccion_1[shape=box, color=coral, label="calle 11-11\n0\n1"];
+
+Node652->Node_652_compras_null 
+ Node_652_compras_null[shape=box,color=coral,label="NULL"];
+
+Node652->Node_652_carrito_null 
+ Node_652_carrito_null[shape=box,color=coral,label="NULL"];
+
+Node652 -> Node953
+Node953[label="953\nmalparido\ncontraseña5"];
+Node953 -> Node738
+Node738[label="738\nlaverga\ncontraseña7"];
+Node738->Node_738_direccion_null 
+ Node_738_direccion_null[shape=box,color=coral,label="NULL"];
+
+Node738->Node_738_compras_0 -> Node_738_compras_1 
+ Node_738_compras_0[shape=box, color=coral, label="Cantidad: 33\nreloj"];
+Node_738_compras_1 -> Node_738_compras_2 
+ Node_738_compras_1[shape=box, color=coral, label="Cantidad: 1\nCelular"];
+Node_738_compras_2 -> Node_738_compras_3 
+ Node_738_compras_2[shape=box, color=coral, label="Cantidad: 22\narroz"];
+ Node_738_compras_3[shape=box, color=coral, label="Cantidad: 2\nfrijol"];
+
+Node738->Node_738_carrito_null 
+ Node_738_carrito_null[shape=box,color=coral,label="NULL"];
+
+Node953->Node_953_direccion_0 -> Node_953_direccion_1 
+ Node_953_direccion_0[shape=box, color=coral, label="12av 11-2\n1\n0"];
+ Node_953_direccion_1[shape=box, color=coral, label="12av 11-3\n1\n1"];
+
+Node953->Node_953_compras_null 
+ Node_953_compras_null[shape=box,color=coral,label="NULL"];
+
+Node953->Node_953_carrito_null 
+ Node_953_carrito_null[shape=box,color=coral,label="NULL"];
+
+Node953 -> Node1069
+Node1069[label="1069\nhijodeputa\ncontraseña6"];
+Node1069->Node_1069_direccion_null 
+ Node_1069_direccion_null[shape=box,color=coral,label="NULL"];
+
+Node1069->Node_1069_compras_0 
+ Node_1069_compras_0[shape=box,color=coral,label="Cantidad: 60\naudifonos"];
+
+Node1069->Node_1069_carrito_0 
+ Node_1069_carrito_0[shape=box,color=coral,label="Cantidad: 16\nfrijol"];
+
+
 
 }

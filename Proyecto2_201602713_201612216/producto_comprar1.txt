@@ -1,0 +1,7 @@
+laverga,33,89981212
+hijodeputa,60,434571
+laverga,1,2
+laverga,22,4345
+laverga,2,21521
+juan,11,434571
+juan,1,2

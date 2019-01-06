@@ -4,11 +4,17 @@
 <xsd:import namespace="http://ServiciosWeb/" schemaLocation="http://localhost:8080/Servidor/WebService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="Cargar">
-<part name="parameters" element="tns:Cargar"/>
+<message name="Graficar_Prod">
+<part name="parameters" element="tns:Graficar_Prod"/>
 </message>
-<message name="CargarResponse">
-<part name="parameters" element="tns:CargarResponse"/>
+<message name="Graficar_ProdResponse">
+<part name="parameters" element="tns:Graficar_ProdResponse"/>
+</message>
+<message name="Cargar_Productos">
+<part name="parameters" element="tns:Cargar_Productos"/>
+</message>
+<message name="Cargar_ProductosResponse">
+<part name="parameters" element="tns:Cargar_ProductosResponse"/>
 </message>
 <message name="InicioSesion">
 <part name="parameters" element="tns:InicioSesion"/>
@@ -16,19 +22,82 @@
 <message name="InicioSesionResponse">
 <part name="parameters" element="tns:InicioSesionResponse"/>
 </message>
+<message name="Cargar_Usuarios">
+<part name="parameters" element="tns:Cargar_Usuarios"/>
+</message>
+<message name="Cargar_UsuariosResponse">
+<part name="parameters" element="tns:Cargar_UsuariosResponse"/>
+</message>
+<message name="Cargar_Carrito">
+<part name="parameters" element="tns:Cargar_Carrito"/>
+</message>
+<message name="Cargar_CarritoResponse">
+<part name="parameters" element="tns:Cargar_CarritoResponse"/>
+</message>
+<message name="Cargar_PorComprar">
+<part name="parameters" element="tns:Cargar_PorComprar"/>
+</message>
+<message name="Cargar_PorComprarResponse">
+<part name="parameters" element="tns:Cargar_PorComprarResponse"/>
+</message>
+<message name="Cargar_Direcciones">
+<part name="parameters" element="tns:Cargar_Direcciones"/>
+</message>
+<message name="Cargar_DireccionesResponse">
+<part name="parameters" element="tns:Cargar_DireccionesResponse"/>
+</message>
+<message name="Graficar_Usu">
+<part name="parameters" element="tns:Graficar_Usu"/>
+</message>
+<message name="Graficar_UsuResponse">
+<part name="parameters" element="tns:Graficar_UsuResponse"/>
+</message>
 <portType name="ServiciosWeb1">
-<operation name="Cargar">
-<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/CargarRequest" message="tns:Cargar"/>
-<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/CargarResponse" message="tns:CargarResponse"/>
+<operation name="Graficar_Prod">
+<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/Graficar_ProdRequest" message="tns:Graficar_Prod"/>
+<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/Graficar_ProdResponse" message="tns:Graficar_ProdResponse"/>
+</operation>
+<operation name="Cargar_Productos">
+<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_ProductosRequest" message="tns:Cargar_Productos"/>
+<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_ProductosResponse" message="tns:Cargar_ProductosResponse"/>
 </operation>
 <operation name="InicioSesion">
 <input wsam:Action="http://ServiciosWeb/ServiciosWeb1/InicioSesionRequest" message="tns:InicioSesion"/>
 <output wsam:Action="http://ServiciosWeb/ServiciosWeb1/InicioSesionResponse" message="tns:InicioSesionResponse"/>
 </operation>
+<operation name="Cargar_Usuarios">
+<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_UsuariosRequest" message="tns:Cargar_Usuarios"/>
+<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_UsuariosResponse" message="tns:Cargar_UsuariosResponse"/>
+</operation>
+<operation name="Cargar_Carrito">
+<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_CarritoRequest" message="tns:Cargar_Carrito"/>
+<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_CarritoResponse" message="tns:Cargar_CarritoResponse"/>
+</operation>
+<operation name="Cargar_PorComprar">
+<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_PorComprarRequest" message="tns:Cargar_PorComprar"/>
+<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_PorComprarResponse" message="tns:Cargar_PorComprarResponse"/>
+</operation>
+<operation name="Cargar_Direcciones">
+<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_DireccionesRequest" message="tns:Cargar_Direcciones"/>
+<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/Cargar_DireccionesResponse" message="tns:Cargar_DireccionesResponse"/>
+</operation>
+<operation name="Graficar_Usu">
+<input wsam:Action="http://ServiciosWeb/ServiciosWeb1/Graficar_UsuRequest" message="tns:Graficar_Usu"/>
+<output wsam:Action="http://ServiciosWeb/ServiciosWeb1/Graficar_UsuResponse" message="tns:Graficar_UsuResponse"/>
+</operation>
 </portType>
 <binding name="ServiciosWeb1PortBinding" type="tns:ServiciosWeb1">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="Cargar">
+<operation name="Graficar_Prod">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Cargar_Productos">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -38,6 +107,51 @@
 </output>
 </operation>
 <operation name="InicioSesion">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Cargar_Usuarios">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Cargar_Carrito">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Cargar_PorComprar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Cargar_Direcciones">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Graficar_Usu">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

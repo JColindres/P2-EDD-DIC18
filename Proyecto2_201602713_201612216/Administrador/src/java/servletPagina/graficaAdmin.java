@@ -19,8 +19,8 @@ import serviciosweb.WebService;
  *
  * @author pablo
  */
-@WebServlet(name = "paginaAdmin", urlPatterns = {"/paginaAdmin"})
-public class paginaAdmin extends HttpServlet {
+@WebServlet(name = "graficaAdmin", urlPatterns = {"/graficaAdmin"})
+public class graficaAdmin extends HttpServlet {
 
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/Servidor/WebService.wsdl")
     private WebService service;
@@ -42,40 +42,22 @@ public class paginaAdmin extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet paginaAdmin</title>");            
+            out.println("<title>Servlet graficaAdmin</title>");            
             out.println("</head>");
             out.println("<body>");
-            //out.println("<h1>Servlet paginaAdmin at " + request.getContextPath() + "</h1>");
-            if(request.getParameter("rutaUsu").equals("")){
+            //out.println("<h1>Servlet paginaAdmin at " + request.getContextPath() + "</h1>");        
+            if(request.getParameter("rutaUsuGraf").equals("")){
                 
             }
             else{
-                out.println(cargar_us(request.getParameter("rutaUsu")));
-            }
-            if(request.getParameter("rutaDire").equals("")){
+                out.println(graficarUsu());
+            }         
+            if(request.getParameter("rutaProdGraf").equals("")){
                 
             }
             else{
-                out.println(cargar_dir(request.getParameter("rutaDire")));
+                out.println(graf_prod());
             }
-            if(request.getParameter("rutaProd").equals("")){
-                
-            }
-            else{
-                out.println(cargar_pro(request.getParameter("rutaProd")));
-            }
-            if(request.getParameter("rutaProdComp").equals("")){
-                
-            }
-            else{
-                out.println(cargar_proXcom(request.getParameter("rutaProdComp")));
-            }            
-            if(request.getParameter("rutaCarrito").equals("")){
-                
-            }
-            else{
-                out.println(cargar_carr(request.getParameter("rutaCarrito")));
-            }    
             out.println("</body>");
             out.println("</html>");
         }
@@ -119,39 +101,18 @@ public class paginaAdmin extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+    
+    private boolean graf_prod() {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
+        return port.graficarProd();
+    }    
 
-    private boolean cargar_us(java.lang.String url) {
+    private boolean graficarUsu() {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
         serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
-        return port.cargarUsuarios(url);
-    }
-    
-    private boolean cargar_dir(java.lang.String url) {
-        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
-        // If the calling of port operations may lead to race condition some synchronization is required.
-        serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
-        return port.cargarDirecciones(url);
-    }
-
-    private boolean cargar_pro(java.lang.String url) {
-        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
-        // If the calling of port operations may lead to race condition some synchronization is required.
-        serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
-        return port.cargarProductos(url);
-    }
-    
-    private boolean cargar_proXcom(java.lang.String url) {
-        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
-        // If the calling of port operations may lead to race condition some synchronization is required.
-        serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
-        return port.cargarPorComprar(url);
-    }
-    
-    private boolean cargar_carr(java.lang.String url) {
-        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
-        // If the calling of port operations may lead to race condition some synchronization is required.
-        serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
-        return port.cargarCarrito(url);
+        return port.graficarUsu();
     }
 }

@@ -48,19 +48,19 @@
                         </tr>
                         <tr>
                             <td>
-                                <h3>usuarios</h3>
+                                <h3>Usuarios</h3>
                             </td>
                             <th>
                                 <input type="submit" name="BtnUsu" value="Cargar" >
                             </th>
                             <th>
-                                <input type="file"  name="rutaUsu" accept=".txt"/>
+                                <input type="file"  name="rutaUsu" accept=".csv"/>
                             </th>
     
                         </tr>
                         <tr>
                             <td>
-                                <h3>direcciones</h3>
+                                <h3>Direcciones</h3>
                             </td>
                             <th>
                                 <input type="submit" name="BtnDire" value="Cargar" >
@@ -110,7 +110,7 @@
                         
                         <tr>
                             <td>
-                                <h3>Venta</h3>
+                                <h3>Ventas</h3>
                             </td>
                             <th>
                                 <input type="submit" name="BtnVenta" value=" Cargar" >
@@ -122,13 +122,62 @@
                         
                         <tr>
                             <td>
-                                <h3>Detalle</h3>
+                                <h3>Detalles</h3>
                             </td>
                             <th>
                                 <input type="submit" name="BtnDetalle" value=" Cargar" >
                             </th>
                             <th>
                                 <input type="file"  name="rutaDetalle" accept=".csv"/>
+                            </th>
+                        </tr>
+                        
+                    </table>
+                </form>
+                <form action="graficaAdmin" method="post">
+                    <table border="1">
+                        <tr>
+                            <td>
+                                <h3>Graficas</h3>
+                            </td>
+                            <td>
+                                <h3>Graficar EDD</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Usuarios</h3>
+                            </td>
+                            <th>
+                                <input type="submit" name="BtnUsuGraf" value="Graficar" >
+                            </th>
+                            <th>
+                                <input type="file"  name="rutaUsuGraf" accept=".txt"/>
+                            </th>
+    
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <h3>Productos</h3>
+                            </td>
+                            <th>
+                                <input type="submit" name="BtnProdGraf" value="Graficar" >
+                            </th>
+                            <th>
+                                <input type="file"  name="rutaProdGraf" accept=".txt"/>
+                            </th>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <h3>Ventas</h3>
+                            </td>
+                            <th>
+                                <input type="submit" name="BtnVentaGraf" value="Graficar" >
+                            </th>
+                            <th>
+                                <input type="file"  name="rutaVentaGraf" accept=".txt"/>
                             </th>
                         </tr>
                         

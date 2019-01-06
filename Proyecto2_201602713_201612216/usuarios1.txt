@@ -1,0 +1,7 @@
+jose,contraseña1
+juan,contraseña2
+pedro,contraseña3
+marito,contraseña4
+malparido,contraseña5
+hijodeputa,contraseña6
+laverga,contraseña7

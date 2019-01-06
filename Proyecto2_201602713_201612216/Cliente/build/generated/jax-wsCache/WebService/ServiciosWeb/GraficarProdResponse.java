@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for CargarResponse complex type.
+ * <p>Java class for Graficar_ProdResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="CargarResponse">
+ * &lt;complexType name="Graficar_ProdResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CargarResponse", propOrder = {
+@XmlType(name = "Graficar_ProdResponse", propOrder = {
     "_return"
 })
-public class CargarResponse {
+public class GraficarProdResponse {
 
     @XmlElement(name = "return")
     protected boolean _return;

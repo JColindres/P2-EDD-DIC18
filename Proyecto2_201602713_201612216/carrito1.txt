@@ -1,0 +1,7 @@
+pedro,12,4345
+pedro,10,21521
+pedro,11,434571
+jose,4,2
+jose,21,89981212
+jose,3,4345
+hijodeputa,16,21521

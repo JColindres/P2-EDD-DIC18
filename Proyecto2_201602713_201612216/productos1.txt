@@ -1,0 +1,5 @@
+4345,arroz,sully,5.0,imagen1
+21521,frijol,delmonte,15.0,imagen2
+434571,audifonos,bose,2000.0,imagen3
+89981212,reloj,lacoste,500.0,imagen4
+2,Celular,Samsung,5000.0,imagen5

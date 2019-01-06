@@ -1,20 +1,112 @@
 <?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ServiciosWeb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ServiciosWeb/">
 
-<xs:element name="Cargar" type="tns:Cargar"/>
+<xs:element name="Cargar_Carrito" type="tns:Cargar_Carrito"/>
 
-<xs:element name="CargarResponse" type="tns:CargarResponse"/>
+<xs:element name="Cargar_CarritoResponse" type="tns:Cargar_CarritoResponse"/>
+
+<xs:element name="Cargar_Direcciones" type="tns:Cargar_Direcciones"/>
+
+<xs:element name="Cargar_DireccionesResponse" type="tns:Cargar_DireccionesResponse"/>
+
+<xs:element name="Cargar_PorComprar" type="tns:Cargar_PorComprar"/>
+
+<xs:element name="Cargar_PorComprarResponse" type="tns:Cargar_PorComprarResponse"/>
+
+<xs:element name="Cargar_Productos" type="tns:Cargar_Productos"/>
+
+<xs:element name="Cargar_ProductosResponse" type="tns:Cargar_ProductosResponse"/>
+
+<xs:element name="Cargar_Usuarios" type="tns:Cargar_Usuarios"/>
+
+<xs:element name="Cargar_UsuariosResponse" type="tns:Cargar_UsuariosResponse"/>
+
+<xs:element name="Graficar_Prod" type="tns:Graficar_Prod"/>
+
+<xs:element name="Graficar_ProdResponse" type="tns:Graficar_ProdResponse"/>
+
+<xs:element name="Graficar_Usu" type="tns:Graficar_Usu"/>
+
+<xs:element name="Graficar_UsuResponse" type="tns:Graficar_UsuResponse"/>
 
 <xs:element name="InicioSesion" type="tns:InicioSesion"/>
 
 <xs:element name="InicioSesionResponse" type="tns:InicioSesionResponse"/>
 
-<xs:complexType name="Cargar">
+<xs:complexType name="Cargar_Carrito">
 <xs:sequence>
 <xs:element name="url" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="CargarResponse">
+<xs:complexType name="Cargar_CarritoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_Direcciones">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_DireccionesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_Productos">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_ProductosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_PorComprar">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_PorComprarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_Usuarios">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_UsuariosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Graficar_Usu">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Graficar_UsuResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Graficar_Prod">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Graficar_ProdResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>

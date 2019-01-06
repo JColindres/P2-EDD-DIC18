@@ -24,16 +24,92 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _CargarResponse_QNAME = new QName("http://ServiciosWeb/", "CargarResponse");
-    private final static QName _Cargar_QNAME = new QName("http://ServiciosWeb/", "Cargar");
+    private final static QName _CargarPorComprar_QNAME = new QName("http://ServiciosWeb/", "Cargar_PorComprar");
+    private final static QName _CargarProductos_QNAME = new QName("http://ServiciosWeb/", "Cargar_Productos");
+    private final static QName _CargarUsuarios_QNAME = new QName("http://ServiciosWeb/", "Cargar_Usuarios");
+    private final static QName _GraficarUsuResponse_QNAME = new QName("http://ServiciosWeb/", "Graficar_UsuResponse");
+    private final static QName _CargarDireccionesResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_DireccionesResponse");
+    private final static QName _GraficarUsu_QNAME = new QName("http://ServiciosWeb/", "Graficar_Usu");
+    private final static QName _CargarUsuariosResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_UsuariosResponse");
+    private final static QName _CargarPorComprarResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_PorComprarResponse");
+    private final static QName _CargarCarrito_QNAME = new QName("http://ServiciosWeb/", "Cargar_Carrito");
+    private final static QName _CargarDirecciones_QNAME = new QName("http://ServiciosWeb/", "Cargar_Direcciones");
+    private final static QName _CargarProductosResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_ProductosResponse");
+    private final static QName _GraficarProdResponse_QNAME = new QName("http://ServiciosWeb/", "Graficar_ProdResponse");
     private final static QName _InicioSesion_QNAME = new QName("http://ServiciosWeb/", "InicioSesion");
+    private final static QName _CargarCarritoResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_CarritoResponse");
     private final static QName _InicioSesionResponse_QNAME = new QName("http://ServiciosWeb/", "InicioSesionResponse");
+    private final static QName _GraficarProd_QNAME = new QName("http://ServiciosWeb/", "Graficar_Prod");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: ServiciosWeb
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link CargarDireccionesResponse }
+     * 
+     */
+    public CargarDireccionesResponse createCargarDireccionesResponse() {
+        return new CargarDireccionesResponse();
+    }
+
+    /**
+     * Create an instance of {@link GraficarUsu }
+     * 
+     */
+    public GraficarUsu createGraficarUsu() {
+        return new GraficarUsu();
+    }
+
+    /**
+     * Create an instance of {@link CargarUsuariosResponse }
+     * 
+     */
+    public CargarUsuariosResponse createCargarUsuariosResponse() {
+        return new CargarUsuariosResponse();
+    }
+
+    /**
+     * Create an instance of {@link CargarPorComprar }
+     * 
+     */
+    public CargarPorComprar createCargarPorComprar() {
+        return new CargarPorComprar();
+    }
+
+    /**
+     * Create an instance of {@link CargarProductos }
+     * 
+     */
+    public CargarProductos createCargarProductos() {
+        return new CargarProductos();
+    }
+
+    /**
+     * Create an instance of {@link CargarUsuarios }
+     * 
+     */
+    public CargarUsuarios createCargarUsuarios() {
+        return new CargarUsuarios();
+    }
+
+    /**
+     * Create an instance of {@link GraficarUsuResponse }
+     * 
+     */
+    public GraficarUsuResponse createGraficarUsuResponse() {
+        return new GraficarUsuResponse();
+    }
+
+    /**
+     * Create an instance of {@link CargarCarritoResponse }
+     * 
+     */
+    public CargarCarritoResponse createCargarCarritoResponse() {
+        return new CargarCarritoResponse();
     }
 
     /**
@@ -45,11 +121,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Cargar }
+     * Create an instance of {@link GraficarProd }
      * 
      */
-    public Cargar createCargar() {
-        return new Cargar();
+    public GraficarProd createGraficarProd() {
+        return new GraficarProd();
+    }
+
+    /**
+     * Create an instance of {@link CargarProductosResponse }
+     * 
+     */
+    public CargarProductosResponse createCargarProductosResponse() {
+        return new CargarProductosResponse();
+    }
+
+    /**
+     * Create an instance of {@link GraficarProdResponse }
+     * 
+     */
+    public GraficarProdResponse createGraficarProdResponse() {
+        return new GraficarProdResponse();
     }
 
     /**
@@ -61,29 +153,135 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CargarResponse }
+     * Create an instance of {@link CargarCarrito }
      * 
      */
-    public CargarResponse createCargarResponse() {
-        return new CargarResponse();
+    public CargarCarrito createCargarCarrito() {
+        return new CargarCarrito();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CargarResponse }{@code >}}
+     * Create an instance of {@link CargarDirecciones }
      * 
      */
-    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "CargarResponse")
-    public JAXBElement<CargarResponse> createCargarResponse(CargarResponse value) {
-        return new JAXBElement<CargarResponse>(_CargarResponse_QNAME, CargarResponse.class, null, value);
+    public CargarDirecciones createCargarDirecciones() {
+        return new CargarDirecciones();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Cargar }{@code >}}
+     * Create an instance of {@link CargarPorComprarResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar")
-    public JAXBElement<Cargar> createCargar(Cargar value) {
-        return new JAXBElement<Cargar>(_Cargar_QNAME, Cargar.class, null, value);
+    public CargarPorComprarResponse createCargarPorComprarResponse() {
+        return new CargarPorComprarResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarPorComprar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_PorComprar")
+    public JAXBElement<CargarPorComprar> createCargarPorComprar(CargarPorComprar value) {
+        return new JAXBElement<CargarPorComprar>(_CargarPorComprar_QNAME, CargarPorComprar.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarProductos }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_Productos")
+    public JAXBElement<CargarProductos> createCargarProductos(CargarProductos value) {
+        return new JAXBElement<CargarProductos>(_CargarProductos_QNAME, CargarProductos.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarUsuarios }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_Usuarios")
+    public JAXBElement<CargarUsuarios> createCargarUsuarios(CargarUsuarios value) {
+        return new JAXBElement<CargarUsuarios>(_CargarUsuarios_QNAME, CargarUsuarios.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GraficarUsuResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Graficar_UsuResponse")
+    public JAXBElement<GraficarUsuResponse> createGraficarUsuResponse(GraficarUsuResponse value) {
+        return new JAXBElement<GraficarUsuResponse>(_GraficarUsuResponse_QNAME, GraficarUsuResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarDireccionesResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_DireccionesResponse")
+    public JAXBElement<CargarDireccionesResponse> createCargarDireccionesResponse(CargarDireccionesResponse value) {
+        return new JAXBElement<CargarDireccionesResponse>(_CargarDireccionesResponse_QNAME, CargarDireccionesResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GraficarUsu }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Graficar_Usu")
+    public JAXBElement<GraficarUsu> createGraficarUsu(GraficarUsu value) {
+        return new JAXBElement<GraficarUsu>(_GraficarUsu_QNAME, GraficarUsu.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarUsuariosResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_UsuariosResponse")
+    public JAXBElement<CargarUsuariosResponse> createCargarUsuariosResponse(CargarUsuariosResponse value) {
+        return new JAXBElement<CargarUsuariosResponse>(_CargarUsuariosResponse_QNAME, CargarUsuariosResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarPorComprarResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_PorComprarResponse")
+    public JAXBElement<CargarPorComprarResponse> createCargarPorComprarResponse(CargarPorComprarResponse value) {
+        return new JAXBElement<CargarPorComprarResponse>(_CargarPorComprarResponse_QNAME, CargarPorComprarResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarCarrito }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_Carrito")
+    public JAXBElement<CargarCarrito> createCargarCarrito(CargarCarrito value) {
+        return new JAXBElement<CargarCarrito>(_CargarCarrito_QNAME, CargarCarrito.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarDirecciones }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_Direcciones")
+    public JAXBElement<CargarDirecciones> createCargarDirecciones(CargarDirecciones value) {
+        return new JAXBElement<CargarDirecciones>(_CargarDirecciones_QNAME, CargarDirecciones.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarProductosResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_ProductosResponse")
+    public JAXBElement<CargarProductosResponse> createCargarProductosResponse(CargarProductosResponse value) {
+        return new JAXBElement<CargarProductosResponse>(_CargarProductosResponse_QNAME, CargarProductosResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GraficarProdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Graficar_ProdResponse")
+    public JAXBElement<GraficarProdResponse> createGraficarProdResponse(GraficarProdResponse value) {
+        return new JAXBElement<GraficarProdResponse>(_GraficarProdResponse_QNAME, GraficarProdResponse.class, null, value);
     }
 
     /**
@@ -96,12 +294,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarCarritoResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_CarritoResponse")
+    public JAXBElement<CargarCarritoResponse> createCargarCarritoResponse(CargarCarritoResponse value) {
+        return new JAXBElement<CargarCarritoResponse>(_CargarCarritoResponse_QNAME, CargarCarritoResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link InicioSesionResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "InicioSesionResponse")
     public JAXBElement<InicioSesionResponse> createInicioSesionResponse(InicioSesionResponse value) {
         return new JAXBElement<InicioSesionResponse>(_InicioSesionResponse_QNAME, InicioSesionResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GraficarProd }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Graficar_Prod")
+    public JAXBElement<GraficarProd> createGraficarProd(GraficarProd value) {
+        return new JAXBElement<GraficarProd>(_GraficarProd_QNAME, GraficarProd.class, null, value);
     }
 
 }

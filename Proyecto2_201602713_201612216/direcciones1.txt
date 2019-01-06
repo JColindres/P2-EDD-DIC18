@@ -1,0 +1,4 @@
+marito,calle 15-12,1,0
+marito,calle 11-11,0,1
+malparido,12av 11-2,1,0
+malparido,12av 11-3,1,1
