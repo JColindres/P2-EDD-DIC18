@@ -27,7 +27,7 @@ public class pagina {
         cantidad = 0;
     }
 
-    public void insertNonFull(info k) {
+    public void insercion(info k) {
         int i = cantidad - 1;
         if (hoja == true) {
             while (i >= 0 && pagina[i].numeroF > k.numeroF) {
@@ -41,16 +41,16 @@ public class pagina {
                 i--;
             }
             if (hijos[i + 1].cantidad == 2 * grado - 1) {
-                splitChild(i + 1, hijos[i + 1]);
+                split(i + 1, hijos[i + 1]);
                 if (pagina[i + 1].numeroF < k.numeroF) {
                     i++;
                 }
             }
-            hijos[i + 1].insertNonFull(k);
+            hijos[i + 1].insercion(k);
         }
     }
 
-    public void splitChild(int i, pagina y) {
+    public void split(int i, pagina y) {
         pagina z = new pagina(y.grado, y.hoja);
         z.cantidad = grado - 1;
         for (int j = 0; j < grado - 1; j++) {
@@ -65,7 +65,12 @@ public class pagina {
         y.cantidad = grado - 1;
 
         for (int j = cantidad; j >= i + 1; j++) {
-            hijos[j + 1] = hijos[j];
+            if (j + 1 < 6) {
+                hijos[j + 1] = hijos[j];
+            }
+            else{
+                break;
+            }
         }
         hijos[i + 1] = z;
         for (int j = cantidad - 1; j >= i; j--) {

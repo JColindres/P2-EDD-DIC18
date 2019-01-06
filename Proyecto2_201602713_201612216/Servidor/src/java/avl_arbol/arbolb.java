@@ -11,36 +11,34 @@ package avl_arbol;
  */
 public class arbolb {
 
-    pagina raiz;
+    public static pagina raiz;
     pagina pivote;
     int nom = 0;
     int grado;
 
-    public arbolb(int grado){
+    public arbolb(int grado) {
         raiz = null;
         this.grado = grado;
     }
 
-    public void insertar(info k){
-        if(raiz==null){
+    public void insertar(info k) {
+        if (raiz == null) {
             raiz = new pagina(grado, true);
-            raiz.pagina[0]=k;
+            raiz.pagina[0] = k;
             raiz.cantidad = 1;
-        }
-        else{
-            if(raiz.cantidad==2*grado-1){
+        } else {
+            if (raiz.cantidad == 2 * grado - 1) {
                 pagina nuevo = new pagina(grado, false);
-                nuevo.hijos[0]=raiz;
-                nuevo.splitChild(0, raiz);
-                int i=0;
-                if(nuevo.pagina[0].numeroF<k.numeroF){
+                nuevo.hijos[0] = raiz;
+                nuevo.split(0, raiz);
+                int i = 0;
+                if (nuevo.pagina[0].numeroF < k.numeroF) {
                     i++;
                 }
-                nuevo.hijos[i].insertNonFull(k);
+                nuevo.hijos[i].insercion(k);
                 raiz = nuevo;
-            }
-            else{
-                raiz.insertNonFull(k);
+            } else {
+                raiz.insercion(k);
             }
         }
     }
@@ -83,23 +81,24 @@ public class arbolb {
         int i = contar(aux.hijos);
         nom = nom + 1;
         if (i != 0) {
-            for (j = 0; j < i; j++) {
-                System.out.print("Nodo" + nom + "[label=\"<P0>");
-                for (cont = 0; cont < aux.hijos[j].cantidad; cont++) {
-                    if (aux.hijos[j].pagina[cont].numeroF != 0) {
-                        System.out.print("|");
-                        System.out.print(aux.hijos[j].pagina[cont].numeroF);
-                        System.out.print("|<P" + (cont + 1) + ">");
+            for (j = 0; j < aux.cantidad + 1; j++) {
+                int L = 0;
+                if (aux.hijos[j].hijos != null) {
+                    if (L < aux.hijos[j].cantidad) {
+                        System.out.print("Nodo" + nom + "[label=\"<P0>");
+                        for (cont = 0; cont < aux.hijos[j].cantidad; cont++) {
+                            if (aux.hijos[j].pagina[cont].numeroF != 0) {
+                                System.out.print("|");
+                                System.out.print(aux.hijos[j].pagina[cont].numeroF);
+                                System.out.print("|<P" + (cont + 1) + ">");
+                            }
+                        }
+                        System.out.println("\"];");
+                        System.out.println("Nodo" + nombre + ":P" + j + "-> Nodo" + nom + ";");
+                        graficar2(aux.hijos[j], nom);
                     }
                 }
-                System.out.println("\"];");
-                System.out.println("Nodo" + nombre + ":P" + j + "-> Nodo" + nom + ";");
-
-                if (aux.hijos[j].hijos != null) {
-                    //if (cont == aux.hijos[j].cantidad) {
-                    graficar2(aux.hijos[j], nom);
-                    //}
-                }
+                L++;
             }
         }
     }
