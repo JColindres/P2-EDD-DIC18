@@ -552,7 +552,6 @@ public class AVL_arbol {
                     System.out.println("Ingrese cantidad del nodo: ");
                     num = sc.nextInt();
                     cola.eliminar(num);
-                    cola.graficar("cola");
                     //recorrer();
                     break;
 

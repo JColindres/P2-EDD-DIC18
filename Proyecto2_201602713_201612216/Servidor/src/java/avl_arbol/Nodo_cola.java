@@ -20,5 +20,6 @@ public class Nodo_cola {
         this.indice=0;
         this.cantidad=0;
         this.siguiente=null;
+        this.producto=null;
     }
 }
