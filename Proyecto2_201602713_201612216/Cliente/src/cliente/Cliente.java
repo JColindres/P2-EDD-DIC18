@@ -24,7 +24,7 @@ public class Cliente extends javax.swing.JFrame {
         initComponents();
         ws = ws_service.getServiciosWeb1Port();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -125,8 +125,10 @@ public class Cliente extends javax.swing.JFrame {
 
         if (res) {
             jLabel4.setText("Se inicio sesion");
-            Menu m = new Menu();
-            m.main(null);
+            //Menu m = new Menu();
+            Menu.usu = ws.usuario(jTextField1.getText());
+            Menu.pass = jPasswordField1.getText();
+            Menu.main(null);
         }
         else{
             jLabel4.setText("Datos incorrectos");

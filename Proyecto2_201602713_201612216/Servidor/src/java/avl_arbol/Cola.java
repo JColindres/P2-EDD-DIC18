@@ -175,5 +175,24 @@ public class Cola {
         }
         return cuerpo;
     }
+    
+    public String toda_cola() {
+        String cuerpo = "";
+        if (primero != null) {
+            actual_co = primero;
+            //cuerpo+="Nodex[color=coral,label=\"Persona: "+nick+"\\nCola\\n"+accion+"\"]";
+
+            if (actual_co.siguiente == null) {
+                cuerpo += actual_co.indice + "," + actual_co.cantidad + "," + actual_co.producto.nombre + "\n";
+            } else {
+                while (actual_co.siguiente != null) {
+                    cuerpo += actual_co.indice + "," + actual_co.cantidad + "," + actual_co.producto.nombre + "\n";
+                    actual_co = actual_co.siguiente;
+                }
+                cuerpo += actual_co.indice + "," + actual_co.cantidad + "," + actual_co.producto.nombre + "\n";
+            }
+        } 
+        return cuerpo;
+    }
 
 }

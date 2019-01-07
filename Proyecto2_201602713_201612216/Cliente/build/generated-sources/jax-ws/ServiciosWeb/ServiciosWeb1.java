@@ -30,6 +30,141 @@ public interface ServiciosWeb1 {
      * @return
      *     returns boolean
      */
+    @WebMethod(operationName = "Cargar_PorComprar")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Cargar_PorComprar", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarPorComprar")
+    @ResponseWrapper(localName = "Cargar_PorComprarResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarPorComprarResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Cargar_PorComprarRequest", output = "http://ServiciosWeb/ServiciosWeb1/Cargar_PorComprarResponse")
+    public boolean cargarPorComprar(
+        @WebParam(name = "url", targetNamespace = "")
+        String url);
+
+    /**
+     * 
+     * @param url
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "Cargar_Direcciones")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Cargar_Direcciones", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarDirecciones")
+    @ResponseWrapper(localName = "Cargar_DireccionesResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarDireccionesResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Cargar_DireccionesRequest", output = "http://ServiciosWeb/ServiciosWeb1/Cargar_DireccionesResponse")
+    public boolean cargarDirecciones(
+        @WebParam(name = "url", targetNamespace = "")
+        String url);
+
+    /**
+     * 
+     * @param user
+     * @return
+     *     returns int
+     */
+    @WebMethod(operationName = "Usuario")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Usuario", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.Usuario")
+    @ResponseWrapper(localName = "UsuarioResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.UsuarioResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/UsuarioRequest", output = "http://ServiciosWeb/ServiciosWeb1/UsuarioResponse")
+    public int usuario(
+        @WebParam(name = "user", targetNamespace = "")
+        String user);
+
+    /**
+     * 
+     * @param prod
+     * @param cant
+     * @param user
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "AgregarLista")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "AgregarLista", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.AgregarLista")
+    @ResponseWrapper(localName = "AgregarListaResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.AgregarListaResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/AgregarListaRequest", output = "http://ServiciosWeb/ServiciosWeb1/AgregarListaResponse")
+    public boolean agregarLista(
+        @WebParam(name = "user", targetNamespace = "")
+        int user,
+        @WebParam(name = "cant", targetNamespace = "")
+        int cant,
+        @WebParam(name = "prod", targetNamespace = "")
+        String prod);
+
+    /**
+     * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(operationName = "PorComprar")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "PorComprar", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.PorComprar")
+    @ResponseWrapper(localName = "PorComprarResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.PorComprarResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/PorComprarRequest", output = "http://ServiciosWeb/ServiciosWeb1/PorComprarResponse")
+    public String porComprar();
+
+    /**
+     * 
+     * @param prod
+     * @param user
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "QuitarLista")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "QuitarLista", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.QuitarLista")
+    @ResponseWrapper(localName = "QuitarListaResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.QuitarListaResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/QuitarListaRequest", output = "http://ServiciosWeb/ServiciosWeb1/QuitarListaResponse")
+    public boolean quitarLista(
+        @WebParam(name = "user", targetNamespace = "")
+        int user,
+        @WebParam(name = "prod", targetNamespace = "")
+        int prod);
+
+    /**
+     * 
+     * @param prod
+     * @param cant
+     * @param prodid
+     * @param user
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "ModificarLista")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "ModificarLista", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.ModificarLista")
+    @ResponseWrapper(localName = "ModificarListaResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.ModificarListaResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/ModificarListaRequest", output = "http://ServiciosWeb/ServiciosWeb1/ModificarListaResponse")
+    public boolean modificarLista(
+        @WebParam(name = "user", targetNamespace = "")
+        int user,
+        @WebParam(name = "prodid", targetNamespace = "")
+        int prodid,
+        @WebParam(name = "cant", targetNamespace = "")
+        int cant,
+        @WebParam(name = "prod", targetNamespace = "")
+        String prod);
+
+    /**
+     * 
+     * @param url
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "Cargar_Productos")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Cargar_Productos", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarProductos")
+    @ResponseWrapper(localName = "Cargar_ProductosResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarProductosResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Cargar_ProductosRequest", output = "http://ServiciosWeb/ServiciosWeb1/Cargar_ProductosResponse")
+    public boolean cargarProductos(
+        @WebParam(name = "url", targetNamespace = "")
+        String url);
+
+    /**
+     * 
+     * @param url
+     * @return
+     *     returns boolean
+     */
     @WebMethod(operationName = "Cargar_Carrito")
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "Cargar_Carrito", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarCarrito")
@@ -41,15 +176,18 @@ public interface ServiciosWeb1 {
 
     /**
      * 
+     * @param url
      * @return
      *     returns boolean
      */
-    @WebMethod(operationName = "Graficar_Usu")
+    @WebMethod(operationName = "Cargar_Ventas")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Graficar_Usu", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarUsu")
-    @ResponseWrapper(localName = "Graficar_UsuResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarUsuResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Graficar_UsuRequest", output = "http://ServiciosWeb/ServiciosWeb1/Graficar_UsuResponse")
-    public boolean graficarUsu();
+    @RequestWrapper(localName = "Cargar_Ventas", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarVentas")
+    @ResponseWrapper(localName = "Cargar_VentasResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarVentasResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Cargar_VentasRequest", output = "http://ServiciosWeb/ServiciosWeb1/Cargar_VentasResponse")
+    public boolean cargarVentas(
+        @WebParam(name = "url", targetNamespace = "")
+        String url);
 
     /**
      * 
@@ -68,18 +206,39 @@ public interface ServiciosWeb1 {
 
     /**
      * 
-     * @param url
      * @return
      *     returns boolean
      */
-    @WebMethod(operationName = "Cargar_Ventas")
+    @WebMethod(operationName = "Graficar_Usu")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Cargar_Ventas", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarVentas")
-    @ResponseWrapper(localName = "Cargar_VentasResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarVentasResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Cargar_VentasRequest", output = "http://ServiciosWeb/ServiciosWeb1/Cargar_VentasResponse")
-    public boolean cargarVentas(
-        @WebParam(name = "url", targetNamespace = "")
-        String url);
+    @RequestWrapper(localName = "Graficar_Usu", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarUsu")
+    @ResponseWrapper(localName = "Graficar_UsuResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarUsuResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Graficar_UsuRequest", output = "http://ServiciosWeb/ServiciosWeb1/Graficar_UsuResponse")
+    public boolean graficarUsu();
+
+    /**
+     * 
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "Graficar_Prod")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Graficar_Prod", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarProd")
+    @ResponseWrapper(localName = "Graficar_ProdResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarProdResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Graficar_ProdRequest", output = "http://ServiciosWeb/ServiciosWeb1/Graficar_ProdResponse")
+    public boolean graficarProd();
+
+    /**
+     * 
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "Graficar_Ven")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Graficar_Ven", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarVen")
+    @ResponseWrapper(localName = "Graficar_VenResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarVenResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Graficar_VenRequest", output = "http://ServiciosWeb/ServiciosWeb1/Graficar_VenResponse")
+    public boolean graficarVen();
 
     /**
      * 
@@ -117,70 +276,13 @@ public interface ServiciosWeb1 {
     /**
      * 
      * @return
-     *     returns boolean
+     *     returns java.lang.String
      */
-    @WebMethod(operationName = "Graficar_Prod")
+    @WebMethod(operationName = "Catalogo")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Graficar_Prod", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarProd")
-    @ResponseWrapper(localName = "Graficar_ProdResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarProdResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Graficar_ProdRequest", output = "http://ServiciosWeb/ServiciosWeb1/Graficar_ProdResponse")
-    public boolean graficarProd();
-
-    /**
-     * 
-     * @param url
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "Cargar_Productos")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Cargar_Productos", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarProductos")
-    @ResponseWrapper(localName = "Cargar_ProductosResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarProductosResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Cargar_ProductosRequest", output = "http://ServiciosWeb/ServiciosWeb1/Cargar_ProductosResponse")
-    public boolean cargarProductos(
-        @WebParam(name = "url", targetNamespace = "")
-        String url);
-
-    /**
-     * 
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "Graficar_Ven")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Graficar_Ven", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarVen")
-    @ResponseWrapper(localName = "Graficar_VenResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.GraficarVenResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Graficar_VenRequest", output = "http://ServiciosWeb/ServiciosWeb1/Graficar_VenResponse")
-    public boolean graficarVen();
-
-    /**
-     * 
-     * @param url
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "Cargar_PorComprar")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Cargar_PorComprar", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarPorComprar")
-    @ResponseWrapper(localName = "Cargar_PorComprarResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarPorComprarResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Cargar_PorComprarRequest", output = "http://ServiciosWeb/ServiciosWeb1/Cargar_PorComprarResponse")
-    public boolean cargarPorComprar(
-        @WebParam(name = "url", targetNamespace = "")
-        String url);
-
-    /**
-     * 
-     * @param url
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "Cargar_Direcciones")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Cargar_Direcciones", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarDirecciones")
-    @ResponseWrapper(localName = "Cargar_DireccionesResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CargarDireccionesResponse")
-    @Action(input = "http://ServiciosWeb/ServiciosWeb1/Cargar_DireccionesRequest", output = "http://ServiciosWeb/ServiciosWeb1/Cargar_DireccionesResponse")
-    public boolean cargarDirecciones(
-        @WebParam(name = "url", targetNamespace = "")
-        String url);
+    @RequestWrapper(localName = "Catalogo", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.Catalogo")
+    @ResponseWrapper(localName = "CatalogoResponse", targetNamespace = "http://ServiciosWeb/", className = "ServiciosWeb.CatalogoResponse")
+    @Action(input = "http://ServiciosWeb/ServiciosWeb1/CatalogoRequest", output = "http://ServiciosWeb/ServiciosWeb1/CatalogoResponse")
+    public String catalogo();
 
 }

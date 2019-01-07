@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ServiciosWeb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ServiciosWeb/">
 
+<xs:element name="AgregarLista" type="tns:AgregarLista"/>
+
+<xs:element name="AgregarListaResponse" type="tns:AgregarListaResponse"/>
+
 <xs:element name="Cargar_Carrito" type="tns:Cargar_Carrito"/>
 
 <xs:element name="Cargar_CarritoResponse" type="tns:Cargar_CarritoResponse"/>
@@ -28,6 +32,10 @@
 
 <xs:element name="Cargar_VentasResponse" type="tns:Cargar_VentasResponse"/>
 
+<xs:element name="Catalogo" type="tns:Catalogo"/>
+
+<xs:element name="CatalogoResponse" type="tns:CatalogoResponse"/>
+
 <xs:element name="Graficar_Prod" type="tns:Graficar_Prod"/>
 
 <xs:element name="Graficar_ProdResponse" type="tns:Graficar_ProdResponse"/>
@@ -44,6 +52,34 @@
 
 <xs:element name="InicioSesionResponse" type="tns:InicioSesionResponse"/>
 
+<xs:element name="ModificarLista" type="tns:ModificarLista"/>
+
+<xs:element name="ModificarListaResponse" type="tns:ModificarListaResponse"/>
+
+<xs:element name="PorComprar" type="tns:PorComprar"/>
+
+<xs:element name="PorComprarResponse" type="tns:PorComprarResponse"/>
+
+<xs:element name="QuitarLista" type="tns:QuitarLista"/>
+
+<xs:element name="QuitarListaResponse" type="tns:QuitarListaResponse"/>
+
+<xs:element name="Usuario" type="tns:Usuario"/>
+
+<xs:element name="UsuarioResponse" type="tns:UsuarioResponse"/>
+
+<xs:complexType name="Cargar_Direcciones">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_DireccionesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="Cargar_Carrito">
 <xs:sequence>
 <xs:element name="url" type="xs:string" minOccurs="0"/>
@@ -56,23 +92,16 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Graficar_Ven">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="Graficar_VenResponse">
+<xs:complexType name="ModificarLista">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
+<xs:element name="user" type="xs:int"/>
+<xs:element name="prodid" type="xs:int"/>
+<xs:element name="cant" type="xs:int"/>
+<xs:element name="prod" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Cargar_Direcciones">
-<xs:sequence>
-<xs:element name="url" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="Cargar_DireccionesResponse">
+<xs:complexType name="ModificarListaResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
@@ -90,13 +119,58 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Cargar_Productos">
+<xs:complexType name="Catalogo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="CatalogoResponse">
 <xs:sequence>
-<xs:element name="url" type="xs:string" minOccurs="0"/>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Cargar_ProductosResponse">
+<xs:complexType name="Graficar_Prod">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Graficar_ProdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarLista">
+<xs:sequence>
+<xs:element name="user" type="xs:int"/>
+<xs:element name="cant" type="xs:int"/>
+<xs:element name="prod" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarListaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InicioSesion">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InicioSesionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Graficar_Ven">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Graficar_VenResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
@@ -114,6 +188,18 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="Cargar_Productos">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_ProductosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="Cargar_Usuarios">
 <xs:sequence>
 <xs:element name="url" type="xs:string" minOccurs="0"/>
@@ -121,6 +207,19 @@
 </xs:complexType>
 
 <xs:complexType name="Cargar_UsuariosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="QuitarLista">
+<xs:sequence>
+<xs:element name="user" type="xs:int"/>
+<xs:element name="prod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="QuitarListaResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
@@ -136,13 +235,25 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Graficar_Prod">
+<xs:complexType name="Usuario">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PorComprar">
 <xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="Graficar_ProdResponse">
+<xs:complexType name="PorComprarResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -153,19 +264,6 @@
 </xs:complexType>
 
 <xs:complexType name="Cargar_VentasResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="InicioSesion">
-<xs:sequence>
-<xs:element name="user" type="xs:string" minOccurs="0"/>
-<xs:element name="pass" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="InicioSesionResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>

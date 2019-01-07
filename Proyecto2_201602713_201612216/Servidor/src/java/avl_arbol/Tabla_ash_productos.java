@@ -216,6 +216,16 @@ public class Tabla_ash_productos {
 
         }
     }
+    
+    public String todos_Productos(){
+        String resultado = "";
+        for (int j = 0; j < tamanio; j++) {
+                if (!tabla_de_productos[j].codigo.equals("-1")) {
+                    resultado += tabla_de_productos[j].codigo + "," + tabla_de_productos[j].nombre + "," + tabla_de_productos[j].precio + "," + tabla_de_productos[j].ruta_imagen + "\n";
+                }
+            }
+        return resultado;
+    }
 
     public void graficar() {
         System.out.println("es validoad vamos a graficar hash");

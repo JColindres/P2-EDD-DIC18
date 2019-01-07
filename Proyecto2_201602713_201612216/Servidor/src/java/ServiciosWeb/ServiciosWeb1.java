@@ -6,6 +6,7 @@
 package ServiciosWeb;
 
 import avl_arbol.AVLtree;
+import avl_arbol.Nodo_productos;
 import avl_arbol.Tabla_ash_productos;
 import avl_arbol.arbolb;
 import java.io.BufferedReader;
@@ -90,5 +91,40 @@ public class ServiciosWeb1 {
     public boolean InicioSesion(@WebParam(name = "user") String user, @WebParam(name = "pass") String pass) {
         int id = avl.obtener_id(user);
         return avl.logear_usuario(id, pass);
+    }
+    
+    @WebMethod(operationName = "Usuario")
+    public int Usuario(@WebParam(name = "user") String user) {
+        return avl.obtener_id(user);
+    }
+    
+    @WebMethod(operationName = "AgregarLista")
+    public boolean AgregarLista(@WebParam(name = "user") int user, @WebParam(name = "cant") int cant, @WebParam(name = "prod") String prod) {
+        Nodo_productos producto = h.recibir_producto(prod);
+        avl.ingresar_productos_comprar(user, cant, producto);
+        return true;
+    }
+    
+    @WebMethod(operationName = "QuitarLista")
+    public boolean QuitarLista(@WebParam(name = "user") int user, @WebParam(name = "prod") int prod) {
+        avl.eliminar_productos_comprar(user, prod);
+        return true;
+    }
+    
+    @WebMethod(operationName = "ModificarLista")
+    public boolean ModificarLista(@WebParam(name = "user") int user, @WebParam(name = "prodid") int prodid, @WebParam(name = "cant") int cant, @WebParam(name = "prod") String prod) {
+        Nodo_productos producto = h.recibir_producto(prod);
+        avl.editar_productos_comprar(user, prodid, cant, producto);
+        return true;
+    }
+    
+    @WebMethod(operationName = "PorComprar")
+    public String PorComprar(@WebParam(name = "user") int user) {
+        return avl.usuario(user).productos_por_comprar.toda_cola();
+    }
+    
+    @WebMethod(operationName = "Catalogo")
+    public String Catalogo() {
+        return h.todos_Productos();
     }
 }

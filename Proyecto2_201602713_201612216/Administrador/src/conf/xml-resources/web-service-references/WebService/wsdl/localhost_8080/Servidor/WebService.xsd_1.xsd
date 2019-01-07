@@ -28,6 +28,10 @@
 
 <xs:element name="Cargar_VentasResponse" type="tns:Cargar_VentasResponse"/>
 
+<xs:element name="Catalogo" type="tns:Catalogo"/>
+
+<xs:element name="CatalogoResponse" type="tns:CatalogoResponse"/>
+
 <xs:element name="Graficar_Prod" type="tns:Graficar_Prod"/>
 
 <xs:element name="Graficar_ProdResponse" type="tns:Graficar_ProdResponse"/>
@@ -43,6 +47,18 @@
 <xs:element name="InicioSesion" type="tns:InicioSesion"/>
 
 <xs:element name="InicioSesionResponse" type="tns:InicioSesionResponse"/>
+
+<xs:complexType name="Cargar_Direcciones">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_DireccionesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
 
 <xs:complexType name="Cargar_Carrito">
 <xs:sequence>
@@ -66,25 +82,13 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Cargar_Direcciones">
+<xs:complexType name="Cargar_PorComprar">
 <xs:sequence>
 <xs:element name="url" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Cargar_DireccionesResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="Cargar_Detalles">
-<xs:sequence>
-<xs:element name="url" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="Cargar_DetallesResponse">
+<xs:complexType name="Cargar_PorComprarResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
@@ -102,13 +106,13 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Cargar_PorComprar">
+<xs:complexType name="Cargar_Detalles">
 <xs:sequence>
 <xs:element name="url" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Cargar_PorComprarResponse">
+<xs:complexType name="Cargar_DetallesResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
@@ -123,6 +127,16 @@
 <xs:complexType name="Cargar_UsuariosResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Catalogo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="CatalogoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
