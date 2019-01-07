@@ -57,6 +57,12 @@ public class graficaAdmin extends HttpServlet {
             }
             else{
                 out.println(graf_prod());
+            }        
+            if(request.getParameter("rutaVentaGraf").equals("")){
+                
+            }
+            else{
+                out.println(graficarVen());
             }
             out.println("</body>");
             out.println("</html>");
@@ -114,5 +120,12 @@ public class graficaAdmin extends HttpServlet {
         // If the calling of port operations may lead to race condition some synchronization is required.
         serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
         return port.graficarUsu();
+    }
+
+    private boolean graficarVen() {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
+        return port.graficarVen();
     }
 }

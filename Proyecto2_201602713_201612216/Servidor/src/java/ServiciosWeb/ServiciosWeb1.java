@@ -7,6 +7,7 @@ package ServiciosWeb;
 
 import avl_arbol.AVLtree;
 import avl_arbol.Tabla_ash_productos;
+import avl_arbol.arbolb;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -23,6 +24,7 @@ public class ServiciosWeb1 {
 
     AVLtree avl = new AVLtree();
     Tabla_ash_productos h = new Tabla_ash_productos(10);
+    arbolb ab = new arbolb();
 
     @WebMethod(operationName = "Cargar_Usuarios")
     public boolean Cargar_Usuarios(@WebParam(name = "url") String url) {
@@ -54,6 +56,18 @@ public class ServiciosWeb1 {
         return true;
     }
     
+    @WebMethod(operationName = "Cargar_Ventas")
+    public boolean Cargar_Ventas(@WebParam(name = "url") String url) {
+        ab.cargar_ventas(url, avl);
+        return true;
+    }
+    
+    @WebMethod(operationName = "Cargar_Detalles")
+    public boolean Cargar_Detalles(@WebParam(name = "url") String url) {
+        ab.cargar_detalle(url, h);
+        return true;
+    }
+    
     @WebMethod(operationName = "Graficar_Usu")
     public boolean Graficar_Usu() {
         avl.graficar(avl.recorrido2(avl.raiz), "arbol");
@@ -63,6 +77,12 @@ public class ServiciosWeb1 {
     @WebMethod(operationName = "Graficar_Prod")
     public boolean Graficar_Prod() {
         h.graficar();
+        return true;
+    }
+    
+    @WebMethod(operationName = "Graficar_Ven")
+    public boolean Graficar_Ven() {
+        ab.graficar();
         return true;
     }
     

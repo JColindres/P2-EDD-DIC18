@@ -75,6 +75,18 @@ public class paginaAdmin extends HttpServlet {
             }
             else{
                 out.println(cargar_carr(request.getParameter("rutaCarrito")));
+            }      
+            if(request.getParameter("rutaVenta").equals("")){
+                
+            }
+            else{
+                out.println(cargarVentas(request.getParameter("rutaVenta")));
+            }      
+            if(request.getParameter("rutaDetalle").equals("")){
+                
+            }
+            else{
+                out.println(cargarDetalles(request.getParameter("rutaDetalle")));
             }    
             out.println("</body>");
             out.println("</html>");
@@ -153,5 +165,19 @@ public class paginaAdmin extends HttpServlet {
         // If the calling of port operations may lead to race condition some synchronization is required.
         serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
         return port.cargarCarrito(url);
+    }
+
+    private boolean cargarVentas(java.lang.String url) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
+        return port.cargarVentas(url);
+    }
+
+    private boolean cargarDetalles(java.lang.String url) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        serviciosweb.ServiciosWeb1 port = service.getServiciosWeb1Port();
+        return port.cargarDetalles(url);
     }
 }

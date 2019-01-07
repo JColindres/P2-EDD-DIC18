@@ -40,6 +40,19 @@ public class AVLtree {
         }
         return false;
     }
+    
+    public Node usuario(int usuario) {
+        Node n = raiz;
+        while (n != null) {
+            if (n.id == usuario) {
+
+                return n;
+            }
+            boolean irizq = n.id > usuario;
+            n = irizq ? n.izquierda : n.derecha;
+        }
+        return null;
+    }
 
     //-------------------------------------------INGRESAR-----------------------------------------------
     public void ingresar_a_carrito(int usuario, int cantidad, Nodo_productos producto) {
@@ -524,7 +537,6 @@ public class AVLtree {
         FileWriter fichero = null;
         PrintWriter pw = null;
         String nombre = cad;
-        //String archivo = nombre + ".txt";
         String archivo = "C:\\Users\\pablo\\Desktop\\P2-EDD-DIC18\\Proyecto2_201602713_201612216\\Servidor\\" + nombre + ".dot";
         try {
             fichero = new FileWriter(archivo);

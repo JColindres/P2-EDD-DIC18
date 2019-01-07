@@ -28,14 +28,20 @@ public class ObjectFactory {
     private final static QName _CargarProductos_QNAME = new QName("http://ServiciosWeb/", "Cargar_Productos");
     private final static QName _CargarUsuarios_QNAME = new QName("http://ServiciosWeb/", "Cargar_Usuarios");
     private final static QName _GraficarUsuResponse_QNAME = new QName("http://ServiciosWeb/", "Graficar_UsuResponse");
+    private final static QName _GraficarVen_QNAME = new QName("http://ServiciosWeb/", "Graficar_Ven");
+    private final static QName _CargarVentas_QNAME = new QName("http://ServiciosWeb/", "Cargar_Ventas");
+    private final static QName _GraficarVenResponse_QNAME = new QName("http://ServiciosWeb/", "Graficar_VenResponse");
     private final static QName _CargarDireccionesResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_DireccionesResponse");
     private final static QName _GraficarUsu_QNAME = new QName("http://ServiciosWeb/", "Graficar_Usu");
+    private final static QName _CargarDetallesResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_DetallesResponse");
     private final static QName _CargarUsuariosResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_UsuariosResponse");
+    private final static QName _CargarDetalles_QNAME = new QName("http://ServiciosWeb/", "Cargar_Detalles");
     private final static QName _CargarPorComprarResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_PorComprarResponse");
     private final static QName _CargarCarrito_QNAME = new QName("http://ServiciosWeb/", "Cargar_Carrito");
     private final static QName _CargarDirecciones_QNAME = new QName("http://ServiciosWeb/", "Cargar_Direcciones");
     private final static QName _CargarProductosResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_ProductosResponse");
     private final static QName _GraficarProdResponse_QNAME = new QName("http://ServiciosWeb/", "Graficar_ProdResponse");
+    private final static QName _CargarVentasResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_VentasResponse");
     private final static QName _InicioSesion_QNAME = new QName("http://ServiciosWeb/", "InicioSesion");
     private final static QName _CargarCarritoResponse_QNAME = new QName("http://ServiciosWeb/", "Cargar_CarritoResponse");
     private final static QName _InicioSesionResponse_QNAME = new QName("http://ServiciosWeb/", "InicioSesionResponse");
@@ -65,11 +71,43 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link CargarDetallesResponse }
+     * 
+     */
+    public CargarDetallesResponse createCargarDetallesResponse() {
+        return new CargarDetallesResponse();
+    }
+
+    /**
      * Create an instance of {@link CargarUsuariosResponse }
      * 
      */
     public CargarUsuariosResponse createCargarUsuariosResponse() {
         return new CargarUsuariosResponse();
+    }
+
+    /**
+     * Create an instance of {@link CargarVentas }
+     * 
+     */
+    public CargarVentas createCargarVentas() {
+        return new CargarVentas();
+    }
+
+    /**
+     * Create an instance of {@link GraficarVenResponse }
+     * 
+     */
+    public GraficarVenResponse createGraficarVenResponse() {
+        return new GraficarVenResponse();
+    }
+
+    /**
+     * Create an instance of {@link GraficarVen }
+     * 
+     */
+    public GraficarVen createGraficarVen() {
+        return new GraficarVen();
     }
 
     /**
@@ -145,6 +183,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link CargarVentasResponse }
+     * 
+     */
+    public CargarVentasResponse createCargarVentasResponse() {
+        return new CargarVentasResponse();
+    }
+
+    /**
      * Create an instance of {@link InicioSesion }
      * 
      */
@@ -166,6 +212,14 @@ public class ObjectFactory {
      */
     public CargarDirecciones createCargarDirecciones() {
         return new CargarDirecciones();
+    }
+
+    /**
+     * Create an instance of {@link CargarDetalles }
+     * 
+     */
+    public CargarDetalles createCargarDetalles() {
+        return new CargarDetalles();
     }
 
     /**
@@ -213,6 +267,33 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GraficarVen }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Graficar_Ven")
+    public JAXBElement<GraficarVen> createGraficarVen(GraficarVen value) {
+        return new JAXBElement<GraficarVen>(_GraficarVen_QNAME, GraficarVen.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarVentas }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_Ventas")
+    public JAXBElement<CargarVentas> createCargarVentas(CargarVentas value) {
+        return new JAXBElement<CargarVentas>(_CargarVentas_QNAME, CargarVentas.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GraficarVenResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Graficar_VenResponse")
+    public JAXBElement<GraficarVenResponse> createGraficarVenResponse(GraficarVenResponse value) {
+        return new JAXBElement<GraficarVenResponse>(_GraficarVenResponse_QNAME, GraficarVenResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CargarDireccionesResponse }{@code >}}
      * 
      */
@@ -231,12 +312,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarDetallesResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_DetallesResponse")
+    public JAXBElement<CargarDetallesResponse> createCargarDetallesResponse(CargarDetallesResponse value) {
+        return new JAXBElement<CargarDetallesResponse>(_CargarDetallesResponse_QNAME, CargarDetallesResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CargarUsuariosResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_UsuariosResponse")
     public JAXBElement<CargarUsuariosResponse> createCargarUsuariosResponse(CargarUsuariosResponse value) {
         return new JAXBElement<CargarUsuariosResponse>(_CargarUsuariosResponse_QNAME, CargarUsuariosResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarDetalles }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_Detalles")
+    public JAXBElement<CargarDetalles> createCargarDetalles(CargarDetalles value) {
+        return new JAXBElement<CargarDetalles>(_CargarDetalles_QNAME, CargarDetalles.class, null, value);
     }
 
     /**
@@ -282,6 +381,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Graficar_ProdResponse")
     public JAXBElement<GraficarProdResponse> createGraficarProdResponse(GraficarProdResponse value) {
         return new JAXBElement<GraficarProdResponse>(_GraficarProdResponse_QNAME, GraficarProdResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CargarVentasResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ServiciosWeb/", name = "Cargar_VentasResponse")
+    public JAXBElement<CargarVentasResponse> createCargarVentasResponse(CargarVentasResponse value) {
+        return new JAXBElement<CargarVentasResponse>(_CargarVentasResponse_QNAME, CargarVentasResponse.class, null, value);
     }
 
     /**

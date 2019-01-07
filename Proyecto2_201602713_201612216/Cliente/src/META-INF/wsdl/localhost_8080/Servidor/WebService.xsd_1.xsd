@@ -4,6 +4,10 @@
 
 <xs:element name="Cargar_CarritoResponse" type="tns:Cargar_CarritoResponse"/>
 
+<xs:element name="Cargar_Detalles" type="tns:Cargar_Detalles"/>
+
+<xs:element name="Cargar_DetallesResponse" type="tns:Cargar_DetallesResponse"/>
+
 <xs:element name="Cargar_Direcciones" type="tns:Cargar_Direcciones"/>
 
 <xs:element name="Cargar_DireccionesResponse" type="tns:Cargar_DireccionesResponse"/>
@@ -20,6 +24,10 @@
 
 <xs:element name="Cargar_UsuariosResponse" type="tns:Cargar_UsuariosResponse"/>
 
+<xs:element name="Cargar_Ventas" type="tns:Cargar_Ventas"/>
+
+<xs:element name="Cargar_VentasResponse" type="tns:Cargar_VentasResponse"/>
+
 <xs:element name="Graficar_Prod" type="tns:Graficar_Prod"/>
 
 <xs:element name="Graficar_ProdResponse" type="tns:Graficar_ProdResponse"/>
@@ -27,6 +35,10 @@
 <xs:element name="Graficar_Usu" type="tns:Graficar_Usu"/>
 
 <xs:element name="Graficar_UsuResponse" type="tns:Graficar_UsuResponse"/>
+
+<xs:element name="Graficar_Ven" type="tns:Graficar_Ven"/>
+
+<xs:element name="Graficar_VenResponse" type="tns:Graficar_VenResponse"/>
 
 <xs:element name="InicioSesion" type="tns:InicioSesion"/>
 
@@ -44,6 +56,16 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="Graficar_Ven">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Graficar_VenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="Cargar_Direcciones">
 <xs:sequence>
 <xs:element name="url" type="xs:string" minOccurs="0"/>
@@ -51,6 +73,18 @@
 </xs:complexType>
 
 <xs:complexType name="Cargar_DireccionesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_Detalles">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_DetallesResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
@@ -107,6 +141,18 @@
 </xs:complexType>
 
 <xs:complexType name="Graficar_ProdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_Ventas">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cargar_VentasResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>

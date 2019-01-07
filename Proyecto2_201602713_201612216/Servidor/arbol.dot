@@ -1,10 +1,10 @@
 digraph G {node[shape=ellipse, style=filled]; edge[color=chartreuse3];rankdir=UD 
 
-Node652[label="652\nmarito\ncontraseña4"];
+Node652[label="652\nmarito\ncontrasena4"];
 Node652 -> Node433
-Node433[label="433\njose\ncontraseña1"];
+Node433[label="433\njose\ncontrasena1"];
 Node433 -> Node430
-Node430[label="430\njuan\ncontraseña2"];
+Node430[label="430\njuan\ncontrasena2"];
 Node430->Node_430_direccion_null 
  Node_430_direccion_null[shape=box,color=coral,label="NULL"];
 
@@ -28,7 +28,7 @@ Node_433_carrito_1 -> Node_433_carrito_2
  Node_433_carrito_2[shape=box, color=coral, label="Cantidad: 3\narroz"];
 
 Node433 -> Node538
-Node538[label="538\npedro\ncontraseña3"];
+Node538[label="538\npedro\ncontrasena3"];
 Node538->Node_538_direccion_null 
  Node_538_direccion_null[shape=box,color=coral,label="NULL"];
 
@@ -52,9 +52,9 @@ Node652->Node_652_carrito_null
  Node_652_carrito_null[shape=box,color=coral,label="NULL"];
 
 Node652 -> Node953
-Node953[label="953\nmalparido\ncontraseña5"];
+Node953[label="953\nmalparido\ncontrasena5"];
 Node953 -> Node738
-Node738[label="738\nlaverga\ncontraseña7"];
+Node738[label="738\nlaverga\ncontrasena7"];
 Node738->Node_738_direccion_null 
  Node_738_direccion_null[shape=box,color=coral,label="NULL"];
 
@@ -80,7 +80,7 @@ Node953->Node_953_carrito_null
  Node_953_carrito_null[shape=box,color=coral,label="NULL"];
 
 Node953 -> Node1069
-Node1069[label="1069\nhijodeputa\ncontraseña6"];
+Node1069[label="1069\nhijodeputa\ncontrasena6"];
 Node1069->Node_1069_direccion_null 
  Node_1069_direccion_null[shape=box,color=coral,label="NULL"];
 

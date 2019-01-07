@@ -14,13 +14,15 @@ public class info {
     int numeroF;
     String fecha;
     int total;
-    AVLtree usuario;
+    Node usuario;
+    Nodo_cola detalle;
 
-    public info(int numeroF, String fecha, int total) {
+    public info(int numeroF, String fecha, int total, Node usuario) {
         this.numeroF = numeroF;
         this.fecha = fecha;
         this.total = total;
-        this.usuario = null;
+        this.usuario = usuario;
+        detalle = null;
     }
 
     public info() {
