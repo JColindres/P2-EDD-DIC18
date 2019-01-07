@@ -1,16 +1,16 @@
 digraph G {node[shape=record, style=filled]; edge[color=chartreuse3];
 
-Nodo0[label="<P0>|3|<P1>"];
-Nodo0:3->Node_3_det_null 
- Node_3_det_null[shape=box,color=coral,label="NULL"];
+Nodo0[label="<P0>|<3>3|<P1>"];
+Nodo0:3->Node_0_3_0 
+ Node_0_3_0[shape=box,color=coral,label="Cantidad: 4\narroz"];
 
 
 Nodo1[label="<P0>|<1>1|<P1>|<2>2|<P2>"];
 Nodo0:P0-> Nodo1;
 Nodo2[label="<P0>|<4>4|<P1>|<5>5|<P2>|<6>6|<P3>|<7>7|<P4>"];
 Nodo0:P1-> Nodo2;
-Nodo2:6->Node_6_det_null 
- Node_6_det_null[shape=box,color=coral,label="NULL"];
+Nodo2:6->Node_0_6_0 
+ Node_0_6_0[shape=box,color=coral,label="Cantidad: 1\nCelular"];
 
 
 

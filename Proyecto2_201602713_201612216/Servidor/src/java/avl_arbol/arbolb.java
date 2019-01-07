@@ -213,7 +213,8 @@ public class arbolb {
                 for (j = 0; j < pivote.cantidad; j++) {
                     if (pivote.pagina[j].numeroF != 0 && pivote.pagina[j].detalle != null) {
                         Cola z = new Cola();
-                        pw.println("Nodo" + contador + ":" + pivote.pagina[j].numeroF + "->" + z.regresa_cola(pivote.pagina[j].numeroF, "det") + "\n");
+                        z.primero = pivote.pagina[j].detalle;
+                        pw.println("Nodo" + contador + ":" + pivote.pagina[j].numeroF + "->" + z.regresa_cola(pivote.pagina[j].detalle.indice, "" + pivote.pagina[j].numeroF) + "\n");
                     }
                 }
                 if (j == pivote.cantidad) {
@@ -258,7 +259,8 @@ public class arbolb {
                     for (cont = 0; cont < aux.hijos[j].cantidad + 1; cont++) {
                         if (aux.hijos[j].pagina[cont].numeroF != 0 && aux.hijos[j].pagina[cont].detalle != null) {
                             Cola z = new Cola();
-                            c = c + "Nodo" + contador + ":" + aux.hijos[j].pagina[cont].numeroF + "->" + z.regresa_cola(aux.hijos[j].pagina[cont].numeroF, "det") + "\n";
+                            z.primero = aux.hijos[j].pagina[cont].detalle;
+                            c = c + "Nodo" + contador + ":" + aux.hijos[j].pagina[cont].numeroF + "->" + z.regresa_cola(aux.hijos[j].pagina[cont].detalle.indice, "" + aux.hijos[j].pagina[cont].numeroF) + "\n";
                         }
                     }
                     graficar2(aux.hijos[j], contador);
